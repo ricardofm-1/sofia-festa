@@ -377,7 +377,7 @@ a { color: var(--pink-text); }
 
 .cards {
   display: grid;
-  gap: 1.3rem;
+  gap: 2.5rem;
 }
 
 /* Entrada suave dos blocos ao carregar a página. A animação usa
@@ -624,7 +624,11 @@ a { color: var(--pink-text); }
 .footer__line {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  max-width: 16rem;
+  margin-inline: auto;
+  text-wrap: balance;
 }
 
 .footer__small {
@@ -639,6 +643,11 @@ a { color: var(--pink-text); }
 
 @media (min-width: 40rem) {
   :root { --gutter: 2rem; }
+
+  .footer__line {
+    font-size: 1.25rem;
+    max-width: 40rem;
+  }
 
   .hero__inner { padding-top: .5rem; }
 
