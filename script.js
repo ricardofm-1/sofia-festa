@@ -90,7 +90,7 @@ function prepararCalendario() {
       "VERSION:2.0",
       "PRODID:-//Festa da Sofia//PT",
       "BEGIN:VEVENT",
-      `UID:sofia-8-anos@festa`,
+      `UID:sofia-8-anos@sofiamartins.lol`,
       `DTSTAMP:${inicio}`,
       `DTSTART:${inicio}`,
       `DTEND:${fim}`,
