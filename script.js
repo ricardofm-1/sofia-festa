@@ -1,12 +1,9 @@
 /* =========================================================
    Festa da Sofia · 8 anos
-   Contagem decrescente, links de calendário e confirmação
-   de presença.
+   Contagem decrescente e links de calendário.
    ========================================================= */
 
-/* --- Dados da festa (altera aqui se algo mudar) ----------
-   O telefone é usado no botão de WhatsApp e no de ligar.
-   Formato internacional, só dígitos: 351 + número. */
+/* --- Dados da festa (altera aqui se algo mudar) ---------- */
 const FESTA = {
   titulo: "Aniversário da Sofia — 8 anos 🎀",
   local: "Party Spot, Rua Fernando Vaz nº 10 B, 1750-108 Lisboa",
@@ -15,7 +12,6 @@ const FESTA = {
   // A 31 de outubro Lisboa já está no horário de inverno (UTC+0).
   inicio: "2026-10-31T14:00:00Z",
   fim: "2026-10-31T16:30:00Z",
-  telefone: "351912345678", // TODO: substituir pelo número de contacto real
 };
 
 /* ---------- Contagem decrescente ---------- */
@@ -106,24 +102,5 @@ function prepararCalendario() {
   }
 }
 
-/* ---------- Confirmação de presença ---------- */
-
-function prepararRsvp() {
-  const mensagem = encodeURIComponent(
-    "Olá! Confirmo a presença na festa de aniversário da Sofia, no dia 31 de outubro. 🎀"
-  );
-
-  const whatsapp = document.getElementById("rsvp-whatsapp");
-  if (whatsapp) {
-    whatsapp.href = `https://wa.me/${FESTA.telefone}?text=${mensagem}`;
-    whatsapp.target = "_blank";
-    whatsapp.rel = "noopener";
-  }
-
-  const telefone = document.getElementById("rsvp-phone");
-  if (telefone) telefone.href = `tel:+${FESTA.telefone}`;
-}
-
 iniciarContagem();
 prepararCalendario();
-prepararRsvp();

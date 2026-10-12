@@ -532,7 +532,8 @@ a { color: var(--pink-text); }
 .tips {
   display: grid;
   gap: .8rem;
-  margin: 1.5rem 0;
+  width: 100%;
+  margin: 1.5rem auto;
 }
 
 .tip {
@@ -540,6 +541,7 @@ a { color: var(--pink-text); }
   border: 2px dashed var(--pink);
   border-radius: var(--radius);
   background: var(--pink-pale);
+  text-align: center;
 }
 
 .tip__title {
